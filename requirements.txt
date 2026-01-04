@@ -48,4 +48,5 @@ hist
 vector
 pint
 particle
-#hepunits
+hepunits
+ipympl
