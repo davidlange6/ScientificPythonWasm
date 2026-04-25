@@ -19,7 +19,7 @@ jobs:
         uses: actions/create-github-app-token@v2
         with:
           app-id: davidlange6-my-test-app
-          private-key: ${{ secrets.APP_PEM }}
+          private-key: ${{ secrets.PROJECT_APP_SEC }}
       # Sets environment variables for this step.
       #
       # Replace `YOUR_ORGANIZATION` with the name of your organization. For example, `octo-org`.
