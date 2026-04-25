@@ -20,6 +20,7 @@ jobs:
         uses: actions/create-github-app-token@v2
         with:
           app-id: 3499947
+          owner: davidlange6
           private-key: ${{ secrets.PROJECT_APP_SEC }}
       # Sets environment variables for this step.
       #
