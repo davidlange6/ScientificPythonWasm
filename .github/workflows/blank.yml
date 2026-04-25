@@ -19,7 +19,7 @@ jobs:
         id: generate-token
         uses: actions/create-github-app-token@v2
         with:
-          app-id: davidlange6-my-test-app
+          app-id: davidlange6 My Test App
           private-key: ${{ secrets.PROJECT_APP_SEC }}
       # Sets environment variables for this step.
       #
