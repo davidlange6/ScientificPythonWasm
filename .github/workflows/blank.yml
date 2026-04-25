@@ -35,7 +35,7 @@ jobs:
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
-              user(login: $org){
+              organization(login: $org){
                 projectV2(number: $number) {
                   id
                   fields(first:20) {
