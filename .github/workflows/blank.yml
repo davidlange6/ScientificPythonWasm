@@ -29,8 +29,7 @@ jobs:
       - name: Get project data
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-          #ORGANIZATION: davidlange6
-          USER: davidlange6
+          ORGANIZATION: davidlange6
           PROJECT_NUMBER: 2
         # Uses [GitHub CLI](https://cli.github.com/manual/) to query the API for the ID of the project and return the name and ID of the first 20 fields in the project. `fields` returns a union and the query uses inline fragments (`... on`) to return information about any `ProjectV2Field` and `ProjectV2SingleSelectField` fields. The response is stored in a file called `project_data.json`.
         run: |
@@ -57,7 +56,8 @@ jobs:
                   }
                 }
               }
-            }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
+            }' -f user=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
+#            }' -f org=$ORGANIZATION -F number=$PROJECT_NUMBER > project_data.json
 
           # Parses the response from the API query and stores the relevant IDs as environment variables. Modify this to get the ID for different fields or options. For example:
           #
